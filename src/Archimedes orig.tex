@@ -27,23 +27,25 @@ We're going to follow a page that in turn follows Archimedes argument for the ap
 
  \subsection*{overview}
  There are three steps which we will repeat (eventually, four times).  
- \begin{center} \includegraphics [scale=0.3] {pi6.png}  \end{center}
+ \begin{center} \includegraphics [scale=0.4] {angle_bisector4.png}  \end{center}
 
- $\bullet$ We will have ratios for the cosecant  ($c/f$) and cotangent ($a/f$), computed in the previous round.  In the first round, these are just $\sqrt{3}$ and $2$.
+ $\bullet$ We will have ratios for the cosecant  ($OC:AC$) and cotangent ($OA:AC$), computed in the previous round.  In the first round, these are just $\sqrt{3}$ and $2$.
  
- $\bullet$ Add them together, obtaining $(c + a)/f$ and observe that this ratio is also equal to $a/d$, by the corollary of the angle bisector theorem.  We obtain the cotangent of the half-angle.
+ $\bullet$ Add them together, obtaining $(OC + OA):AC$, but observe that this ratio is also equal to $OA:AD$, by the corollary of the angle bisector theorem.  We thereby obtain the cotangent of the half-angle.
  
- $\bullet$ Obtain the cosecant of the half-angle, $b/d$, by using the Pythagorean theorem.  Namely:
- \[ a^2 + d^2 = b^2 \]
-\[ \sqrt{\frac{a^2}{d^2} + 1} = \frac{b}{d} \]
+ $\bullet$ Obtain the cosecant of the half-angle, $OD:AD$, by using the Pythagorean theorem.  Namely:
+ \[ OA^2 + AD^2 = OD^2 \]
+\[ \sqrt{\frac{OA^2}{AD^2} + 1} = \frac{OD}{AD} \]
 
 \subsection*{Part A, round 1}
-Draw a circle with radius $OA$ and tangent $AC$, and let $\angle AOC$ be one-third of a right angle.
+Draw a circle with radius $OA$ and tangent $AC$, and let $\angle AOC$ be one-third of a right angle.  (Note that these desginations differ from the previous figure and proofs).
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
-Note: the figure appears to have been compressed in width.  The angle bisectors don't look right and the original angle looks more like $45$ than $30$.  We'll use it anyway.
+Also note: the figure appears to have been compressed in width.  The angle bisectors don't look right and the original angle looks more like $45$ than $30$.  We'll use it anyway.
 
-Since the triangle is a 30-60-90 triangle, $OA = \sqrt{3}$ and $AC = 1$, so the ratio is just $\sqrt{3}$.  $265/153$ is a (very good) approximation, just slightly smaller than the true value.
+Since the triangle is a 30-60-90 triangle, $OA:AC = \sqrt{3}$.  
+
+$265/153$ is a (very good) approximation, just slightly smaller than the true value.
 
 $\bullet$   $OA:AC > 265:153$
 
@@ -53,17 +55,7 @@ $\bullet$   $OC:AC = 306:153$
 
 Now draw the angle bisector $OD$.
 
-$\bullet$   $CO : OA = CD : DA$
-
-This is just the angle bisector theorem.
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
-
-This ratio is equal to that from the bisector theorem by the corollary.  Start with
-\[ CO:OA = CD:DA \]
-\[ \frac{CO + OA}{OA} = \frac{CD + DA}{DA} = \frac{CA}{DA} \]
-
-This crucial step gives us the cotangent of the half-angle formed by the angle bisector $OD$.
-
 $\bullet$   $(CO + OA) : CA = OA : AD$
 
 We just add numerators for the first two ratios above, leaving the result over the common denominator.
@@ -71,10 +63,10 @@ We just add numerators for the first two ratios above, leaving the result over t
 $\bullet$   $OA : AD > 571 : 153$
 
 Finally, we want $OD : AD$.  By the Pythagorean Theorem
-\[ OD^2 = OA^2 + AD^2 \]
 \[ (OD : AD)^2 = (OA : AD)^2 + 1 \]
 
-Now do $571^2 = 326041;  153^2 = 23409$ so the sum of numerators is $349450$ and the square root is $591 \ 1/6$.
+Math:
+$571^2 = 326041;  153^2 = 23409;  \sqrt{+} = 591.143$ 
 
 $\bullet$   $OD : AD > 591\ 1/8 : 153$
 
@@ -86,9 +78,7 @@ Now draw the angle bisector $OE$.
 
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
-$\bullet$ From above, we have that $OA : AD > 571 : 153$ and $OD : AD > 591\ 1/8 : 153$.
-
-Just carry out our arithmetic. 
+Just carry out the arithmetic. 
 \[ 571 + 591 \ 1/8 = 1162 \ 1/8 \]
 \[ 1162^2 = 1350244;  153^2 = 23409;  \sqrt{+} =1172.03 \]
 Remember the $1/8$.
@@ -103,7 +93,7 @@ Now draw the angle bisector $OF$.
 
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
-Just carry out our arithmetic. 
+Just carry out our arithmetic, again. 
 \[ 1162 \ 1/8 + 1172 \ 1/8 = 2334 \ 1/4 \]
 \[ 2334^2 = 5447556;  + 23409;  \sqrt{+} = 2339 \]
 Remember the $1/4$.
@@ -118,12 +108,12 @@ Now draw the angle bisector $OG$.
 
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
-Arithmetic. 
+Arithmetic: 
 \[ 2334 \ 1/4 + 2339 \ 1/4 = 4673 \ 1/2 \]
 
-$\bullet$  $\cot \theta/2 > 4673 \ 1/2:153$
-
 We do not need the cosecant.
+
+$\bullet$  $\cot \theta/2 > 4673 \ 1/2:153$
 
 We're almost done.  The original distance $AC$ was $1/12$ the perimeter of a circumscribed polygon, so we would multiply by $12$ to get the ratio to the radius, but we want the ratio to the diameter so that gives a factor of $2$ on the bottom for a total factor of $6$.  
 
@@ -160,8 +150,6 @@ The first statement just restates the construction as an angle bisector.  The se
 
 As a consequence, $\triangle dBD \sim \triangle dAC$.
 
-$\bullet$  $AD : DB < 2911 : 780$
-
 Start with the similar triangles above and write three ratios of long side (not hypotenuse) to short side
 \[ AD : BD = BD : Dd = AC : Cd \]
 Note: the source has $AB:Bd$ but this seems to be an error.  That is a ratio of two hypotenuses and so is not equal to the others.  As a result, I was unable to follow this part of the proof:
@@ -178,9 +166,9 @@ We also have that $\triangle ABD$ is a right triangle and by virtue of the angle
 \[ AC:Cd = AD:DB \]
 These two lines combine to give the desired result.  
 
-The ratio $AD:DB$ is what we need going forward, and we get that from the other part:  $(AB + AC):BC$.  We have that the cotangent $AC : BC < 1351 : 780$, and $AB:BC$ is the cosecant whose value is $2$ so we multiply $780 \times 2 = 1560$, and then add $1351$ to get the numerator of the result listed above.
+The ratio $AD:DB$ is what we need going forward, and we get that by evaluating  $(AB + AC):BC$.  We have that the cotangent $AC : BC < 1351 : 780$, and $AB:BC$ is the cosecant whose value is $2$ so we multiply $780 \times 2 = 1560$, and then add $1351$ to get the numerator of the result.
 
-$\bullet$  $AB : BD < 3013 \ 3/4 : 780$
+$\bullet$  $AD : DB < 2911 : 780$
 
 From the Pythagorean theorem:  $AD^2 + BD^2 = AB^2$ so
 \[ AB^2:BD^2 = AD^2:BD^2 + 1 \]
@@ -188,8 +176,12 @@ $AD : DB < 2911 : 780$  So we obtain $2911^2 = 8473921$ and $BD^2 = 608400$ so w
 \[ AB^2:BD^2 =  9082321: 608400 \]
 \[ AB:BD <  3013 \ 3/4: 780 \]
 
+$\bullet$  $AB : BD < 3013 \ 3/4 : 780$
+
+It is interesting that, although the construction is different, we are using the same relationships to go from the cotangent and cosecant of $\theta$ to the cotangent and cosecant of $\theta/2$.
+
 \subsection*{Part B, round 1 summary}
-Let's summarize what we did in round 1.  We started with the cosecant and the cotangent for $\triangle ABC$, namely $AB:BC$ and $:AC:BC$.
+It is interesting that, although the construction is different, we are using the same relationships.  We started with the cosecant and the cotangent for $\triangle ABC$, namely $AB:BC$ and $:AC:BC$.
 
 We used the relationship $(AB + AC):BC = AD:DB$ to obtain the cotangent of the bisected angle, and then we used the Pythagorean theorem in this form
 \[ AB^2:BD^2 = AD^2:BD^2 + 1 \]
@@ -213,7 +205,7 @@ Then the cosecant.
 
 For the first part we have $2911:780 + 3013 \ 3/4:780 = 5924 \ 3/4:780$.  
 
-We reduce the denominator to $240$.  This amounts to dividing by $3 \ 1/4$.  $5924 \ 3/4$ divided by $3 \ 1/4$ is exactly equal to $1823$.
+At this point, we reduce the denominator to $240$.  This amounts to dividing by $3 \ 1/4$.  $5924 \ 3/4$ divided by $3 \ 1/4$ is exactly equal to $1823$.
 
 $\bullet$ $AE:EB = 1823:240$, the cotangent.
 
@@ -259,6 +251,8 @@ $\bullet$ $AG:GB = 2016 \ 1/6:66$, the cotangent.
 Now do $2016^2 = 4064256;  66^2 = 4356$ so that's $4068612$ and the square root is $2017 \ 1/12$ while the source gives
 
 $\bullet$ $AB:GB < 2017 \ 1/4:66$, the cosecant.
+
+This time we do need the cosecant, because the hypotenuse of the triangle is lying on the diameter.
 
 Almost done.  The side $BG$ is a side of an inscribed regular polygon of $96$ sides.  We multiply $66 \times 96 = 6336$ and compute the ratio of the inverse.  
 

@@ -32,7 +32,7 @@ In the end, we will arrive at the famous expression:
 
 The first write-up 
 
-- [original](Archimedes true.pdf)
+- [original](Archimedes orig.pdf)
 
 follows the [web page](https://itech.fgcu.edu/faculty/clindsey/mhf4404/archimedes/archimedes.html) I found that showed me how.  
 
@@ -42,23 +42,14 @@ The next uses single letters (like ``f``) for the sides, and de-emphasizes the g
 
 - [revised](Archimedes csc.pdf)
 
-#### Proofs
-
-In this section, we have short write-ups for the various mathematical proofs required for the calculations in the first section.
-
-- [sum of angles](Sum of angles.pdf)
-- [double and half-angle formulas](Double angle.pdf)
-- [angle bisector](Angle bisector.pdf)
-
-I will also have something to say about the various fractional manipulations and estimates for square roots.
-
-#### More modern approaches
-
 The first of several modern approaches builds the argument for the sum of perimeters in terms of the sine and tangent of the half angle.
 
 - [Trigonometry](Trigonometry.pdf)
 
-There are two other sets of formulas that also reach this end, one based on perimeters, and the other on areas.  These formulas are intriguing because they are simple, and it is not surprising that they are connected.  
+
+#### More modern approaches
+
+There are other sets of formulas that reach this end, one based on perimeters, and the other on areas.  These formulas are intriguing because they are simple, and it is not at all surprising that they are connected.  
 
 For example, consider a circle of unit <i>diameter</i>, so that &pi; is equal to the perimeter.  If ``p`` and ``P`` are the inside and outside perimeters for polygons whose sectors have central angle &theta;, and the same symbols are used with primes for angle &theta;/2, then:
 
@@ -66,7 +57,7 @@ For example, consider a circle of unit <i>diameter</i>, so that &pi; is equal to
 P' = 2pP/(p + P)
 1/P' = 1/2(1/p + 1/P)
 
-p'^2 = pP'
+p'2 = pP'
 ```
 
 The corresponding formulas for inside (``a``) and outside (``A``) areas are (for a circle of unit radius)
@@ -76,7 +67,7 @@ A' = 2a'A/(a' + A)
 a'^2 = aA
 ```
 
-Notice that these two similar sets of formulas are subtly different.  
+However, notice that these two very similar sets of formulas are subtly different.  
 
 For example, to go from ``p`` and ``P`` to the primed version, we start with the first formula, while for area we must start with the square root.  
 
@@ -99,4 +90,14 @@ In an alternative approach, we analyze the basic geometry to derive all the form
 Finally, we run some calculations to check the formulas obtained above.
 
 - [Calculations](calculations.py)
+
+#### Proofs
+
+In this section, we have short write-ups for the various mathematical proofs required for the calculations in the first section.
+
+- [sum of angles](Sum of angles.pdf)
+- [double and half-angle formulas](Double angle.pdf)
+- [angle bisector](Angle bisector.pdf)
+
+I will also have something to say about the various fractional manipulations and estimates for square roots.
 

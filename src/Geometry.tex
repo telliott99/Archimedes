@@ -25,9 +25,9 @@ Draw a circle centered at $O$ (only an arc of the circle  is shown).
 
 Points on the circle are chosen such that the arc length is an integral fraction of the whole.  Equivalently, set $n \theta = 2 \pi$.  
 
-Two adjacent sectors are shown in the figure above.  The two polygons might be drawn so that the vertices of the internal and external figures are on the same ray, with parallel sides.  However, the construction shown is more convenient.
+Two adjacent sectors are shown in the figure above.  The two polygons might be drawn so that the vertices of the internal and external figures are on the same ray, with parallel sides.  However, the construction shown is convenient.
 
-The precise scale does not matter to the argument (nor the value of $n$).  If it should turn out that the arc length as drawn is not exactly right, increase or decrease the radius of the circle and then fit it to the figure, keeping two points on the perimeter, and adjust $O$ to be at the center of the adjusted circle.
+The precise scale does not matter to the argument (nor the value of $n$).  If it should turn out that the arc length as drawn is not exactly right, increase or decrease the radius of the circle and then fit it to the figure, keeping two points on the perimeter, and let $O$ be at the center of the adjusted circle.
 
 Two red lines comprise this sector's external perimeter $P$, while a single blue line is the inscribed perimeter $p$.  The lines of the external perimeter are both tangent to the circle, and the whole figure is symmetric in each sector, with one blue and two red lines.
 \begin{center} \includegraphics [scale=0.3] {Gregory_r1.png} \end{center}
@@ -44,11 +44,13 @@ A central relationship we use below is that $\triangle PRT$ is isosceles.  For a
 \begin{center} \includegraphics [scale=0.3] {Gregory_r2b.png} \end{center}
 Or note that $OT$ bisects $\angle POQ$ so $\triangle POT \cong \triangle ROT$ by SAS.
 
-A consequence is that $PR$ bisects $\angle QPS$.  This can also be proved by an argument based on the sum of internal angles for an $n$-gon,
+A consequence is that $PR$ bisects $\angle QPS$.  $\angle RPS = \angle PRT$ (alternate interior angles of parallel lines) but $\triangle PRT$ is isosceles so $\angle RPT = \angle PRT = \angle RPS$.  Therefore, $RP$ is the bisector.
+
+This can also be proved by an argument based on the sum of internal angles for an $n$-gon,
 
 It looks as if the segment of the vertical that extends beyond the radius might be equal to that part below down to what looks like the "strut" of a kite.  However, this is not true.  We will show what this ratio is equal to in just a bit.
 
-Rather than use the vertices as points of reference, we will label the line segments.
+Rather than use the vertices as points of reference, let us label the line segments.
 \begin{center} \includegraphics [scale=0.3] {Gregory_r3.png} \end{center}
 Just to be clear:  $a$ is the part of the radius extended to point $S$ above, while $b$ extends to $Q$.  $c$ and $d$ are the lengths of the indicated lines \emph{in the half-sector}, not all the way across, and $f$ is the entire length of $PQ$.
 
@@ -149,7 +151,7 @@ $\square$
 
 This can also be proved using the \hyperref[sec:angle_bisector]{\textbf{angle bisector theorem}}.
 \begin{center} \includegraphics [scale=0.25] {Gregory10.png} \end{center}
-The side labeled $e$ bisects the angle formed by the two sides labeled $c$ and $f$.  Therefore 
+The side labeled $e$ bisects the angle formed by the two sides labeled $c$ and $f$.  Therefore, by the corollary of the angle bisector theorem:
 \[ \frac{b-r}{f} = \frac{r-a}{c} \ \ \Rightarrow \ \  \frac{b-r}{r-a} = \frac{f}{c} \]
 But $f$ and $c$ are two sides of a triangle which is similar to the colored portions below:
 

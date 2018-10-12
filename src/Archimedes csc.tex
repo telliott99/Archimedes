@@ -19,7 +19,7 @@
 \maketitle
 \Large
 
-In another write-up about Archimedes and $\pi$, I have followed this page
+In the original write-up on this topic about Archimedes and $\pi$, I have followed this page
 
 \url{https://itech.fgcu.edu/faculty/clindsey/mhf4404/archimedes/archimedes.html}
 
@@ -32,13 +32,15 @@ and has statements like:
 
 $\bullet$   $OA:AC > 265:153$
 
-I found the use of the line segments cumbersome, almost as hard as the ratios and arithmetic with fractions.  But without the latter two, we'd just be left with trigonometry.
+I find the use of the line segments cumbersome, almost as hard as the ratios and arithmetic with fractions.  But without the latter two, we'd just be left with trigonometry.
 
 So, I am going to try here to work through the same logic and arithmetic, but using a diagram like this one:
 \begin{center} \includegraphics [scale=0.4] {pi9.png} \end{center}
 We will make statements like
 
-$\bullet$   $a:f > 265:153$,  or even better $\bullet$  $\cot \theta > 265:153$.
+$\bullet$   $a:f > 265:153$,  or even better 
+
+$\bullet$  $\cot \theta > 265:153$.
 \subsection*{theorems}
 
 Two theorems are central to everything we do here.  The first one says that, since $b$ bisects $\angle \theta$.
@@ -52,9 +54,9 @@ The second is the Pythagorean theorem, which says that
 \[ \frac{b}{d} = \sqrt{ \frac{a^2}{d^2} + 1} \]
 In the language of trigonometry we would say that
 \[ \csc \theta/2 = \sqrt{ \cot^2 \theta + 1} \]
-In combination, these two simple manipulations take us from the cosecant and cotangent of any angle, to the cosecant and cotangent of the half-angle.  
+In combination, these two simple manipulations take us from the cosecant and cotangent of any angle $\theta$, to the cosecant and cotangent of the half-angle $\theta/2$.  
 
-We start with $\theta = \pi/6$.  The cotangent of $\theta$ is the ratio of the radius to the segment of the side of a regular hexagon that circumscribes the circle.  
+We start with $\theta = \pi/6$.  The cotangent of $\theta$ is the ratio of the radius to one-half one of the sides of a regular hexagon that circumscribes the circle.  
 
 If we invert the cotangent and multiply that by $12$ for the number of sides, but divide $2$ because we want the ratio to the diameter, we can obtain an estimate (not a great one), for the value of $\pi$ ($3.464$).
 
@@ -70,9 +72,7 @@ The first value is the first of two estimates Archimedes makes for $\sqrt{3}$.  
 \[ 1.7320261 = 265:153 \]
 \[ 1.7320508 = \sqrt{3} \]
 
-The estimate is 25 ppm smaller than the actual value.  In this section, we are finding an upper bound of $\pi$.
-
-[Isn't this a problem?]
+The estimate is 25 ppm smaller than the actual value.  In this section, we are finding an upper bound of $\pi$.  If we say that the bound is \emph{smaller} than some value, compared to what we are really entitled to say, this will be OK.
 
 To write the cosecant, we choose the same value for the denominator as for the cotangent.
 
@@ -108,7 +108,6 @@ $\bullet$  $\csc \theta/8 > 2339:153$
 
 \subsection*{round 4}
 \[ 2334 \ 1/4 + 2339 = 4673 \ 1/4 \]
-\[ 4673^2 = 21836929;  + 23409 \ \  \sqrt{+} = 4675 \ 1/2 \]
 
 $\bullet$  $\cot \theta/16 > 4673 / 1/2:153$ 
 
@@ -138,7 +137,7 @@ which we redraw as
 \begin{center} \includegraphics [scale=0.4] {pi10.png} \end{center}
 Note that we are working with the diameter and not the radius now.
 
-Once again we will need the cotangent and the cosecant.  For the largest triangle, a right triangle, these are
+Once again we will need the cotangent and the cosecant.  For the large triangle, a right triangle, these are
 \[ \cot \theta = \frac{c}{d + e} \]
 \[ \csc \theta =  \frac{a}{d + e} \]
 We have, by the angle bisector corollary
@@ -148,7 +147,7 @@ We have $c/d$ and need $b/d$.  But $c^2 + d^2 = b^2$ so
 \[ \frac{b^2}{d^2} = \frac{c^2}{d^2} + 1 \]
 \[ \csc \theta/2 = \sqrt{\cot^2 \theta/2 + 1} \]
 
-These are exactly the same formulas we used in part 1.  
+These are exactly the same formulas we used in part 1 even though the diagram is different!
 
 $\bullet$  $\cot \theta >1351 : 780$
 
@@ -158,7 +157,7 @@ The first ratio is an approximation for $\sqrt{3}$, even better than the previou
 \[ 1.7320513= 1351:780 \]
 \[ 1.7320508 = \sqrt{3} \]
 
-Crucially, it is just slightly more than the true value, whereas 265/153 was slightly less.   In this section, we are finding a lower bound on $\pi$.  If our estimates of square roots and fractions run a bit lower than the exact values, that is OK.
+Crucially, it is just slightly more than the true value, whereas 265/153 was slightly less.   In this section, we are finding a lower bound on $\pi$.  If our estimates of square roots and fractions run a bit more than the exact values, that is OK.
 
 The cosecant is $2:1$, placed over the same denominator.
 
@@ -173,7 +172,7 @@ $\bullet$  $\csc \theta/2 > 3013 \ 3/4: 780$
 \subsection*{round 2}
 \[ 2911 + 3013 \ 3/4 = 5924 \ 3/4 \]
 
-$\bullet$  $\cot \theta/4 > 5924 \ 3/4 : 780$ 
+$\bullet$  $\cot \theta/4 > 5924 \ 3/4 : 780 = 1823 : 240$
 
 Before doing the next computation, we reduce the denominator to $240$, which amounts to dividing $5924 \ 3/4$ by $3 \ 1/4$ = $1823$, exactly.
 
@@ -186,7 +185,7 @@ $\bullet$  $\csc \theta/4 > 1838 \ 9/11: 240$
 
 $\bullet$  $\cot \theta/8 > 3661 \ 9/11 : 240$ 
 
-Once again, before doing the second computation, we reduce the denominator, this time to $66$.  This amounts to dividing by $3.636$ which has a fractional form:  .
+Once again, before doing the second computation, we reduce the denominator, this time to $66$.  This amounts to dividing by $3.636$ which has a fractional form:  $40/11$.
 
 The cotangent becomes 1007 exactly.
 
@@ -196,8 +195,8 @@ $\bullet$  $\cot \theta/8 > 1007 : 66$
 $\bullet$  $\csc \theta/8 > 1009 \ 1/6 : 66$
 
 \subsection*{round 4}
-\[ 1007 + 1009 = 2016 \]
-\[ 2016^2 = 4064256;  + 608400 \ \ \sqrt{+} = 2161.63 \]
+\[ 1007 + 1009 \ 1/6 = 2016 \]
+\[ 2016^2 = 4064256;  66^2 = 4356 \ \ \sqrt{+} = 2017.08 \]
 
 $\bullet$  $\cot \theta/16 > 2016 \ 1/6 : 66$ 
 
@@ -209,7 +208,7 @@ The original angled line segment $BC$ was \emph{one-sixth} of the total perimete
 
 $\theta$ has been bisected four times ($1/16$) so now we have $6 \times 16 = 96$ sides.  Our tiny vertical is $1/96$ of the total perimeter.
 
-We do not need to adjust for the radius this time, we've been working with the diameter, however, we must remember to invert the ratio first.
+We do not need to adjust for the radius this time, because we've been working with the diameter, however, we must remember to invert the ratio first.
 
 $66 \times 96 = 6336$.
 
