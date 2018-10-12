@@ -1,0 +1,85 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+%break
+\title{Double and half angles}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+\label{sec:double_half_angles}
+
+We will find it useful in several problems to be able to compute the sine, cosine and tangent of angle $2\theta$, knowing the values for $\theta$.  These formulas can be rearranged to give the values of $\theta/2$ in terms of $\theta$.
+
+I can't remember these formulas, but derive them from the sum of angles when needed.
+
+\subsection*{cosine}
+
+Start with our old friend:
+
+\[ \cos s + t = \cos s \cos t - \sin s \sin t \]
+
+Let $s=t$:
+\[ \cos 2s = \cos^2 s - \sin^2 s \]
+Since $\sin^2 s + \cos^2 s = 1$, $-\sin^2 = \cos^2 - 1$ so
+\[  \cos 2s = 2 \cos^2 s - 1 \]
+
+We can use this formula to compute the value for $2s$ given that for $s$.  To go from $2\theta$ to $\theta$:
+\[ \cos^2 s = \frac{1}{2}(1 + \cos 2s) \]
+\[ \cos s = \sqrt{ \frac{1}{2}(1 + \cos 2s)} \]
+
+\subsection*{sine}
+\[ \sin s + t = \sin s \cos t + \cos t \sin s \]
+
+Let $s = t$:
+\[ \sin 2s = 2 \sin s \cos s \]
+
+Put the other way
+\[ \sin s = \frac{\sin 2s}{2 \cos s} \]
+
+\subsection*{tangent}
+
+The formulas for the tangent are easily obtained by substitution.  Let us simplify the notation a bit by setting $S = \sin 2t$ and $S' = \sin t$ and similarly for cosine and tangent.  From above we have the basic relationships
+
+\[ S' = \frac{S}{2 C'} \]
+and
+\[ C' = \sqrt{\frac{1}{2} (1 + C)}  \]
+\[ 2[C']^2 = 1 + C \]
+
+So the tangent ($T' = \tan s$) is:
+\[ T' = \frac{S'}{C'} = \frac{S}{2C'} \ \frac{1}{C'} = \frac{S}{2 [C']^2} \]
+\[ = \frac{S}{1 + C} \]
+That's a fairly remarkable simplification!
+
+Another way to say the same thing:
+\[ \frac{1}{T'} = \frac{1}{T} + \frac{1}{S} \]
+
+This result can be massaged in various ways.  Multiply on the top and bottom of the right-hand side by $T$
+\[ T' = \frac{ST}{S + T} \]
+
+Also, since
+\[ T'  = \frac{S}{1 + C} = \frac{S'}{C'} \]
+\[ C' = \frac{S'(1+C)}{S} \]
+
+In going from unprimed ($2 \theta$) to prime ($\theta$), it seems that the most straightforward way is to compute
+
+\[ C' = \sqrt{\frac{1}{2} (1 + C)}  \]
+\[ T'  = \frac{S}{1 + C} \]
+and then the sine last
+\[ S' = \frac{S}{2 C'} \]
+
+
+\end{document}

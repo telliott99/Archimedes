@@ -1,0 +1,71 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Perimeter formula}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+This web page originally got me started with this derivation
+
+\url{http://personal.bgsu.edu/~carother/pi/Pi3d.html}
+
+(Unfortunately, the link is dead now, probably because the University took Dr. Carother's pages down when he died, idiots).  It has been preserved by the wayback machine:
+
+\url{https://web.archive.org/web/20171024182015/http://personal.bgsu.edu/~carother/pi/Pi3d.html}
+
+On that page, there was given a simple pair of formulas listed, namely, for an inside perimeter $p$ and an outside perimeter $P$
+\[ P' = \frac{2pP}{p + P} \]
+\[ p' = \sqrt{pP'} \]
+
+The first equation can be rearranged to give
+\[ \frac{1}{P'} = \frac{1}{2} \ [ \frac{1}{P} + \frac{1}{p} \ ] \]
+which is the definition of the harmonic mean of $p$ and $P$, while the second equation is the geometric mean.
+
+Since in our derivation $p$ and $P$ are the same multiple of $S$ and $T$, it seems like the same relationships should hold for the sine and tangent, but we must remember the extra factor of $2$.
+
+From the half-angle formulas, we said that
+\[ T'  = \frac{S}{1 + C} \]
+Multiply top and bottom on the right by $T$:
+\[ T' = \frac{ST}{T + S} \]
+
+Recall that $S$ is the same as $p$, within a factor of $n$, and that $T$ is the same as $P$, within the same factor.
+\[ p = nS \]
+\[ P = nT \]
+while 
+\[ P' = 2nT' \]
+
+Going back to 
+\[ T' = \frac{ST}{T + S} \]
+\[ 2nT' = \frac{2 \cdot nS \cdot nT}{nT + nS} \]
+\[ P' = \frac{2pP}{p + P} \]
+
+This is what was given.
+
+For the second one
+\[ S' = \frac{S}{2 C'} \]
+\[ = \frac{S}{2} \ \frac{T'}{S'} \]
+Then
+\[ 4[S']^2 = S \cdot 2T' \]
+\[ [2nS']^2 = nS \cdot 2nT' \]
+Changing  variables, $p' = 2nS'$
+\[ [p']^2 = pP' \]
+
+Finally
+\[ p' = \sqrt{pP'} \]
+which matches what was given.
+
+\end{document}
