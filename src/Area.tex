@@ -19,32 +19,49 @@
 \maketitle
 \Large
 
-I became aware later that there is yet another way to apply the method, and that is to calculate the \emph{areas} of inscribed and circumscribed polygons.  We'll go through this briefly.
+In this write-up we go from the half-angle formulas to a pair of formulas for polygon area.
 
-For this approach we use a unit circle (radius $1$) rather than a diameter of $1$, as we did above.  As before, we define $\theta$ to be the central angle of the half-sector (i.e. $\theta = 2\pi/2n$).
+I became aware later that there is an easy way to calculate the \emph{areas} of inscribed and circumscribed polygons.
+
+For the area approach use a unit circle (radius $1$) rather than a diameter of $1$, as we did above, since $\pi r^2$ means the ratio of the area to the radius is equal to $\pi$.
+
+As before, we define $\theta$ to be the central angle of the half-sector (i.e. $\theta = 2\pi/2n$).
+
 \begin{center} \includegraphics [scale=0.5] {pi.png} \end{center}
-Rather than draw an entirely new figure, just imagine in the left panel that we draw the angle bisector of angle $2 \theta$.  The area of each new triangle is then $\sin \theta \cos \theta / 2$ and the total area of the inner polygon is
+
+Rather than draw an entirely new figure, try to imagine in the left panel that we draw the angle bisector of angle $2 \theta$.  The area of each new triangle is then $\sin \theta \cos \theta / 2$ and the total area of the inner polygon is
 \[ a = n \sin \theta \cos \theta = n SC \]
-in the notation we adopted previously.  As before, to progress to $a'$ we have a factor of $2$ as well as the new values $S'$ and $C'$:
+in the notation we adopted previously. 
+
+To progress to $a'$ ($2n$ sides) we have a factor of $2$ as well as the new values $S'$ and $C'$:
 \[ a' = 2n S'C' \]
 
-For the circumscribed or outer polygon, we just have what we had before, that the side length of the triangle in the right panel is $\tan \theta$ so the total area is
+For the circumscribed or outer polygon, the sides of the triangle are the unit radius and the tangent.  Thus, we have what we had before, that the side length of the triangle in the right panel is $\tan \theta$ so the total area is
 \[ A = nT \]
 
 Bring in the half-angle formulas as follows:
-\[ a' = 2n S'C' = 2n \cdot \frac{S}{2C'} \cdot C' = nS \]
-That is slick, but we need an expression for $nS$:
-\[ aA = nSC \cdot n \frac{S}{C} = [nS]^2 \]
-\[ aA = [a']^2 \]
+\[ a = n SC \]
+\[ a' = 2n S'C' \]
+Since $S' = S/2C'$:
+\[ a' = 2n \cdot \frac{S}{2C'} \cdot C' \]
+\[ = nS \]
+Very slick.  It's counter-intuitive but $a' = nS$.
+
+We still need an expression involving area that we can equate to $nS$:
+\[ aA = nSC \cdot nT \]
+\[ = nSC \cdot n \frac{S}{C} = [nS]^2 \]
+\[ aA = a'^2 \]
 \[ a' = \sqrt{aA} \]
 
-This is like, and yet subtly different than what we had when calculating the perimeter.
+This is like, and yet subtly different than what we had when calculating the perimeter ($p' = \sqrt{pP'}$).
 
-Since
-\[ A = nT \]
-and
-\[ A' = 2nT' \]
-\[ = 2n \frac{ST}{S + T} = 2 \frac{nS \cdot nT}{nS + nT} \]
+To get the other formula, our half-angle formula for tangent is
+\[ T'  = \frac{ST}{S + T } \]
+since $A' = 2nT'$
+\[ A' = 2nT' = 2n \frac{ST}{S + T} \]
+\[ = 2 \frac{nS \cdot nT}{nS + nT} \]
+Rememeber $a' = nS$ but $A = nT$ so
+
 \[ A' = 2 \frac{a'A}{a' + A} \]
 Compare
 \[ a' = \sqrt{aA}  \ \ \ \ \  A' = 2 \frac{a'A}{a' + A} \]
