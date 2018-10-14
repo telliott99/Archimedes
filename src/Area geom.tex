@@ -12,19 +12,19 @@
 \graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
 % \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
 
-\title{Value of pi and Gregory}
+\title{Area formula by geometry}
 \date{}
 
 \begin{document}
 \maketitle
 \Large
-In this write-up, we use basic geometry to derive the two formulas for the area of inscribed and circumscribed polygons from the basic geometry.
+We use basic geometry to derive the two formulas for the area of inscribed and circumscribed polygons from the basic geometry.
 
 The area formulas for inside ($a$) and outside ($A$) polygons are those for a circle of unit radius (so that $\pi$ is the area):
 \[ A' = 2 \frac{a'A}{a' + A} \]
 \[ a' = \sqrt{aA} \]
 
-However, we need another symbol for area, because $a$ is currently the line segment corresponding to $p/n$.  Let's use $I$ and $C$ for the inside and outside areas, to match the source.  
+However, we need another symbol for area, because $a$ is also currently the line segment corresponding to $p/n$.  Let's use $I$ and $C$ for the inside and outside areas, to match the source.  
 
 \url{https://divisbyzero.com/2018/09/28/proof-without-word-gregorys-theorem/}
 
@@ -37,7 +37,7 @@ The first two areas are $I_n$ and $I_{2n}$
 \includegraphics [scale=0.3] {Gregory1.png} 
 \includegraphics [scale=0.3] {Gregory2.png} 
 \end{center}
-We compute these areas for the whole sector of angle $\theta$, so there are two congruent triangles with base $a$ (or base $r$) and height $c$. Multiply by $n$ if you like to get the entire polygon, but every expression will have a factor of $n$, and we'll be looking at ratios, so we can just not worry about it.
+We compute these areas for the whole sector of angle $\theta$, so there are two congruent triangles with base $a$ (or base $r$) and height $c$. Multiply by $n$ if you like to get the entire polygon, but every expression will have a factor of $n$, and we'll be looking at ratios, so we could just not worry about it.
 
 The third easy one is $C_n$:
 \begin{center}
@@ -78,7 +78,9 @@ $\square$
 
 This can also be proved using the \hyperref[sec:angle_bisector]{\textbf{angle bisector theorem}}.
 \begin{center} \includegraphics [scale=0.25] {Gregory10.png} \end{center}
-The side labeled $e$ bisects the angle formed by the two sides labeled $c$ and $f$.  Therefore, by the corollary of the angle bisector theorem:
+The side labeled $e$ bisects the angle formed by the two sides labeled $c$ and $f$.  
+
+Therefore, by a corollary of the angle bisector theorem:
 \[ \frac{b-r}{f} = \frac{r-a}{c} \ \ \Rightarrow \ \  \frac{b-r}{r-a} = \frac{f}{c} \]
 But $f$ and $c$ are two sides of a triangle which is similar to the colored portions below:
 
@@ -103,6 +105,8 @@ For the other formula, what we have is:
 \[ I_{2n} (C_n - C_{2n}) = C_n (C_{2n} - I_{2n}) \]
 \[ 2 I_{2n} C_n = C_n C_{2n} + I_{2n} C_{2n} \]
 \[ = C_{2n}(C_{n} + I_{2n}) \]
+(It took me a while to figure this part out.  It helps to label everything with single letters when pushing symbols around).
+
 So
 \[ C_{2n}  = 2 \cdot \frac{I_{2n} C_n} {C_{n} + I_{2n}}  \]
 \[ C_{2n} = 2 \cdot \frac{1}{1/I_{2n} + 1/C_n} \]
@@ -116,11 +120,13 @@ The area-based formulas given above are due to James Gregory.
 
 \url{https://divisbyzero.com/2018/09/28/proof-without-word-gregorys-theorem/}
 
-As an aside, the Fundamental Theorem of Calculus (FTC) is usually thought about (taught and learned) using the language of functions, and ascribed mainly to Leibnitz, with some credit to the two Isaacs, Newton and his university lecturer, Barrow.
+As an aside, the Fundamental Theorem of Calculus (FTC) is usually thought about using the language of functions, and ascribed mainly to Leibnitz, with some credit to the two Isaacs, Newton and his university lecturer, Barrow.
 
 \url{https://arxiv.org/abs/1111.6145}
 
-Amazingly enough, Gregory published a geometric (Euclidean) proof of the FTC in 1668!  That predates Liebnitz (1693) by more than 25 years.  This is motivation to give considerable credit to individuals other than Newton and Liebnitz (e.g. Fermat, Pascal, Wallis, Gregory, etc.) in the invention of the calculus.
+Amazingly enough, Gregory published a geometric (Euclidean) proof of the FTC in 1668.  That predates Liebnitz (1693) by more than 25 years!  
+
+This should motivate us to give considerable credit to individuals other than Newton and Liebnitz, including Fermat, Pascal, Wallis, Gregory and more, in the invention of the calculus.
 
 
 \end{document}

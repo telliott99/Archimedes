@@ -22,9 +22,9 @@
 
 \label{sec:double_half_angles}
 
-We will find it useful in several problems to be able to compute the sine, cosine and tangent of angle $2\theta$, knowing the values for $\theta$.  These formulas can be rearranged to give the values of $\theta/2$ in terms of $\theta$.
+We will find it useful in several problems to be able to compute the sine, cosine and tangent of angle $2\theta$, knowing the values of the functions for angle $\theta$.  These formulas can be rearranged to give the values of $\theta/2$ in terms of $\theta$.
 
-I can't remember these formulas, but derive them from the sum of angles when needed.
+I usually can't remember these formulas, but easily derive them from the sum of angles when needed.
 
 \subsection*{cosine}
 
@@ -67,6 +67,11 @@ That's a fairly remarkable simplification!
 Another way to say the same thing:
 \[ \frac{1}{T'} = \frac{1}{T} + \frac{1}{S} \]
 
+The last version is used extensively by Archimedes, although it isn't labeled as such.  Another way to say it in modern language is
+\[ \cot \theta/2 = \cot \theta + \csc \theta \]
+
+This comes from our half-angle formula and is also proven easily using the angle bisection theorem.
+
 This result can be massaged in various ways.  Multiply on the top and bottom of the right-hand side by $T$
 \[ T' = \frac{ST}{S + T} \]
 
@@ -74,11 +79,11 @@ Also, since
 \[ T'  = \frac{S}{1 + C} = \frac{S'}{C'} \]
 \[ C' = \frac{S'(1+C)}{S} \]
 
-In going from unprimed ($2 \theta$) to prime ($\theta$), it seems that the most straightforward way is to compute
+In going from unprimed ($2 \theta$) to prime ($\theta$), it seems that the most straightforward way is to compute one or both of these first
 
 \[ C' = \sqrt{\frac{1}{2} (1 + C)}  \]
 \[ T'  = \frac{S}{1 + C} \]
-and then the sine last
+and then the sine requires $C'$ so it comes later.
 \[ S' = \frac{S}{2 C'} \]
 
 

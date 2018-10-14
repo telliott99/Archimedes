@@ -1,0 +1,102 @@
+ \documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Perimeter formula by geometry}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+In this write-up, we use a geometric analysis to derive the two formulas for the perimeter of inscribed and circumscribed polygons.
+
+\begin{center} \includegraphics [scale=0.3] {Gregory_r0.png} \end{center}
+Draw a circle centered at $O$ (only an arc of the circle  is shown).  
+
+Vertices of the polygon are chosen such that the arc length for each side is an integral fraction of the whole.  Equivalently, choose $\theta$ such that $n \theta = 2 \pi$.  
+
+To give a better feel for the big picture, two adjacent sectors are shown in the figure above.  The two polygons can be drawn so that the vertices of the internal and external polygons are on the same ray, in that case with parallel sides.  However, the offset construction shown is convenient.
+
+The precise scale does not matter to the argument (nor the value of $n$).  If it should turn out that the arc length as drawn is not exactly right, increase or decrease the radius of the circle and then fit it to the figure, keeping two points on the perimeter, and let $O$ be at the center of the adjusted circle.  By symmetry, nothing else will change.
+
+Two red lines comprise this sector's external perimeter $P$ (not to be confused with the vertex marked $P$ in the figure), while a single blue line is the inscribed perimeter $p$.  The lines of the external perimeter are both tangent to the circle, and the whole figure is symmetric in each sector, with one blue and two red lines.
+\begin{center} \includegraphics [scale=0.3] {Gregory_r1.png} \end{center}
+
+$\angle PSR$ is a right angle.  Proof:  we simply appeal to symmetry, or point out the congruent triangles.  Since $OR$ bisects $\angle \theta$, we have SAS.  $\angle ORT$ is also a right triangle, since $TR$ is tangent to the circle and $OR$ is a radius.
+
+Next, draw the perimeters $p'$ and $P'$ for the polygon with $2n$ sides and sector angle $\phi = \theta/2$.
+
+It is convenient to rotate the internal perimeter by $\theta/2$ with respect to the external one, a bit to the left when we draw $p'$ and a bit to the right for $P'$.  Both $p'$ and $P'$ touch the circle at $R$.
+
+\begin{center} \includegraphics [scale=0.3] {Gregory_r2.png} \end{center}
+
+A central relationship we use below is that $\triangle PRT$ is isosceles.  For a proof, draw $OT$ and appeal to symmetry.
+
+\begin{center} \includegraphics [scale=0.3] {Gregory_r2b.png} \end{center}
+Or note that $OT$ bisects $\angle POQ$ so $\triangle POT \cong \triangle ROT$ by SAS.  Therefore $PT = TR$.
+
+A consequence of this is that $PR$ bisects $\angle QPS$.  $\angle RPS = \angle PRT$ (alternate interior angles of parallel lines) but $\triangle PRT$ is isosceles so $\angle RPT = \angle PRT = \angle RPS$.  Therefore, $RP$ is the bisector.
+
+This can also be proved by an argument based on the sum of internal angles for an $n$-gon,
+
+It looks as if the segment of the vertical that extends beyond the radius might be equal to that part below down to what looks like the "strut" of a kite.  However, this turns out not to be true.  The true value of this ratio is given later.
+
+Rather than use the vertices as points of reference, let us now label the line segments.
+
+\begin{center} \includegraphics [scale=0.3] {Gregory_r3.png} \end{center}
+
+Just to be clear:  $a$ is the part of the radius extended to point $S$ in the original diagram above, while $b$ extends to $Q$.  $c$ and $d$ are the lengths of the indicated lines \emph{in the half-sector}, not all the way across, and $f$ is the entire length of $PQ$.
+
+We're ready to proceed.
+
+\subsection*{basic geometry:  perimeters}
+As we said, the key observation is that $\triangle PRT$ is isosceles.  
+\begin{center} 
+\includegraphics [scale=0.3] {Gregory_r2c.png} 
+\includegraphics [scale=0.3] {Gregory_r4.png}
+\end{center}
+
+Because of that, the cosines are also equal, namely:
+\[ \frac{c}{e} = \frac{e/2}{d} \]
+(To see the midpoint of $e$, drop an altitude in the isosceles triangle, shaded in purple).
+
+Therefore:
+\[ 2dc = e^2 \]
+Now, $c$ is the entirety of $p$ in this half-sector.  But $d$ is only one-half of $P'$.  
+
+Hence $2d \cdot c$ is equal to $pP'$, and since $e = p'$, we have that 
+\[ pP' = [p']^2 \]
+which was our second rule for the perimeters.
+
+The first rule was
+\[ P' = 2 \frac{pP}{p + P} \]
+
+In geometric terms, we must show that
+\[ 2d = 2 \frac{cf}{c + f} \]
+\[ cd + df = cf \]
+
+Taking another look at the diagram:
+\begin{center} 
+\includegraphics [scale=0.3] {Gregory_r2c.png} 
+\includegraphics [scale=0.3] {Gregory_r4.png}
+\end{center}
+
+The small triangle with base $d$ ($\triangle QRT$) has slanted side $f - d$ (subtracting $d$ because, again, $\triangle PRT$ is isosceles).  By similar triangles, we have
+\[ \frac{d}{f-d} = \frac{c}{f} \]
+\[ df = cf - cd \]
+\[ cd + df = cf \]
+But this is what we needed to prove.
+
+$\square$
+
+\end{document}

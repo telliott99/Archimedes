@@ -1,0 +1,65 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Hand calculating}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+
+\subsection*{perimeter}
+$P$ first, then $p$.  For a square on a circle of diameter $1$, the outside perimeter is
+\[ P = 4 \]
+while the inside is
+\[ p = 2 \sqrt{2} \]
+
+Next:  $P$ (re-using the symbol):
+\[ P = \frac{2pP}{p+P} = \frac{16 \sqrt{2}}{4 + 2 \sqrt{2}} = \frac{8}{1 + \sqrt{2}} = 3.3137 \]
+Then $p$:
+\[ p = \sqrt{pP} = \sqrt{2 \sqrt{2} \cdot \frac{8}{1 + \sqrt{2}}} = 4 \sqrt{\frac{1}{1 +1/ \sqrt{2}}} = 3.0615  \]
+
+\subsection*{area}
+$a$ first, then $A$.  For a square on a circle of radius $1$, the inside area is
+\[ a = \sqrt{2} \cdot \sqrt{2} = 2 \]
+while the outside is 
+\[ A = 4 \]
+Next (re-using the symbol):
+\[ a = \sqrt{aA} = \sqrt{8} = 2 \sqrt{2} \]
+Then $A$
+\[ A = \frac{2aA}{a + A} = 16 \frac{\sqrt{2} }{4 + 2 \sqrt{2}} = \frac{8}{1 + \sqrt{2}} = 3.3137 \]
+Then $a$:
+\[ a = \sqrt{aA} = \sqrt{2 \sqrt{2} \cdot \frac{8}{1 + \sqrt{2}}} = 4 \sqrt{\frac{1}{1 +1/ \sqrt{2}}} = 3.0615  \]
+
+The calculations are identical, and will remain so from here on out.
+
+\subsection*{sine and tangent}
+$n=4$
+\[ n \sin \theta = 4 \cdot \frac{1}{\sqrt{2}} = 2 \sqrt{2} \]
+\[ n \tan \theta = 4 \cdot 1 = 4 \]
+At this stage, the inner area by trigonometry is equal to the second value of $a$ above, and the outer area is equal to the first value of $A$ above.
+
+Calculate $S'$, etc:
+\[ C' = \sqrt{\frac{1}{2} (1 + C)} = \sqrt{\frac{1}{2} (1 + 1/\sqrt{2}) } \]
+\[ S' = S/2C' = \frac{1}{2 \sqrt{2}} \cdot \sqrt{\frac{2}{1 + 1/\sqrt{2}}} = \frac{1}{2} \cdot \sqrt{\frac{1}{1 + 1/\sqrt{2}}} \]
+\[ T' = \frac{S}{1 + C} = \frac{1/\sqrt{2}}{1 + 1/\sqrt{2}} = \frac{1}{1 + \sqrt{2}} \]
+
+so for $n=8$
+\[ n S' = 4 \sqrt{\frac{1}{1 + 1/\sqrt{2}}} \]
+\[ n T' = \frac{8}{1 + \sqrt{2}} \]
+It continues.  At this stage, the inner area is equal to the third value of $a$ above, while the outer area is equal to the second value of $A$ above.
+
+It's the same calculation, in disguise.
+
+\end{document}
