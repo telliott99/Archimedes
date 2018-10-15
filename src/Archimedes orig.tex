@@ -29,7 +29,7 @@ We're going to follow a page that in turn follows Archimedes argument for the ap
  There are three steps which we will repeat (eventually, four times).  
  \begin{center} \includegraphics [scale=0.4] {angle_bisector4.png}  \end{center}
 
- $\bullet$ We will have ratios for the cosecant  ($OC:AC$) and cotangent ($OA:AC$), computed in the previous round.  In the first round, these are just $\sqrt{3}$ and $2$.
+ $\bullet$ We will have ratios for the cosecant  ($OC:AC$) and cotangent ($OA:AC$), computed in the previous round.
  
  $\bullet$ Add them together, obtaining $(OC + OA):AC$, but observe that this ratio is also equal to $OA:AD$, by the corollary of the angle bisector theorem.  We thereby obtain the cotangent of the half-angle.
  
@@ -41,15 +41,15 @@ We're going to follow a page that in turn follows Archimedes argument for the ap
 Draw a circle with radius $OA$ and tangent $AC$, and let $\angle AOC$ be one-third of a right angle.  (Note that these desginations differ from the previous figure and proofs).
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
-Also note: the figure appears to have been compressed in width.  The angle bisectors don't look right and the original angle looks more like $45$ than $30$.  We'll use it anyway.
+The figure appears to have been compressed in width at some point.  The original angle looks more like $45$ than $30$.  It doesn't really matter.
 
-Since the triangle is a 30-60-90 triangle, $OA:AC = \sqrt{3}$.  
+Now, since the triangle is a 30-60-90 triangle, $OA:AC = \sqrt{3}$.  
 
 $265/153$ is a (very good) approximation, just slightly smaller than the true value.
 
 $\bullet$   $OA:AC > 265:153$
 
-The cosecant $= 2$.  The denominator has been chosen to match the previous ratio.  
+The value of the cosecant is $2$.  The denominator has been chosen to match the previous ratio.  
 
 $\bullet$   $OC:AC = 306:153$
 
@@ -70,18 +70,19 @@ $571^2 = 326041;  153^2 = 23409;  \sqrt{+} = 591.143$
 
 $\bullet$   $OD : AD > 591\ 1/8 : 153$
 
-Archimedes approximates the result as 591\ 1/8 : 153.  Remember that we are looking for a lower bound,  so smaller is OK.
+Archimedes approximates the result as 591\ 1/8 : 153.
 
 \subsection*{Part A, round 2}
-
 Now draw the angle bisector $OE$.
-
 \begin{center} \includegraphics [scale=0.3] {pi5.png} \end{center}
 
 Just carry out the arithmetic. 
 \[ 571 + 591 \ 1/8 = 1162 \ 1/8 \]
-\[ 1162^2 = 1350244;  153^2 = 23409;  \sqrt{+} =1172.03 \]
-Remember the $1/8$.
+\[ 1162^2 = 1350244;  153^2 = 23409;  \sqrt{+} =1172.15 \]
+
+A reasonable first approximation for $\sqrt{a^2 + b^2}$ when $a has a small fractional part$ is to simply carry over the fraction.  Above we start with $0.125$ and end up with $0.153$.
+
+We use $1/8$ as the resulting fraction.  We are trying to fit an upper bound as tight as possible.  However, we should not fit it tighter than justified.  Here, the decimal result is a bit higher than $1/8$, that is, we are fitting it tighter than justified, but it's a really small effect.
 
 $\bullet$  $\cot \theta/2 > 1162 \ 1/8:153$
 
@@ -111,11 +112,11 @@ Now draw the angle bisector $OG$.
 Arithmetic: 
 \[ 2334 \ 1/4 + 2339 \ 1/4 = 4673 \ 1/2 \]
 
-We do not need the cosecant.
+We do not need to calculate the cosecant.
 
 $\bullet$  $\cot \theta/2 > 4673 \ 1/2:153$
 
-We're almost done.  The original distance $AC$ was $1/12$ the perimeter of a circumscribed polygon, so we would multiply by $12$ to get the ratio to the radius, but we want the ratio to the diameter so that gives a factor of $2$ on the bottom for a total factor of $6$.  
+We're almost done.  The original distance $AC$ was $1/12$ the perimeter of a circumscribed hexagon, so we would multiply by $12$ to get the ratio to the radius, but we want the ratio to the diameter so that gives a factor of $2$ on the bottom for a total factor of $6$.  
 
 There is an additional factor of 16 for the four "halvings" of $2^4$.  Hence we obtain
 
@@ -138,7 +139,7 @@ As before $\triangle ABC$ is a $30-60-90$ right triangle.
 
 $\bullet$  $AC : BC < 1351 : 780$.
 
-This ratio is an approximation for $\sqrt{3}$.  It is an even better approximation than the previous one, and also, crucially, it is just slightly \emph{more} than the true value, whereas $265/153$ was slightly less.
+This ratio is an approximation for $\sqrt{3}$.  It is an even better approximation than the previous one ($265:153$), and also, crucially, it is just slightly \emph{more} than the true value, whereas $265/153$ was slightly less.  Since now we are trying to fit a lower bound, this is a good thing.
 
 \subsection*{Part B, round 1}
 
@@ -152,19 +153,23 @@ As a consequence, $\triangle dBD \sim \triangle dAC$.
 
 Start with the similar triangles above and write three ratios of long side (not hypotenuse) to short side
 \[ AD : BD = BD : Dd = AC : Cd \]
-Note: the source has $AB:Bd$ but this seems to be an error.  That is a ratio of two hypotenuses and so is not equal to the others.  As a result, I was unable to follow this part of the proof:
-\begin{center} \includegraphics [scale=0.6] {pi8.png} \end{center}
+Note: the source has $AB:Bd$ but this seems to be an error.  That is a ratio of two hypotenuses and so is not equal to the others.  
 
-However, I was able to prove the last statement
+As a result, I hesitate to follow this part of the proof:
+\begin{center} \includegraphics [scale=0.6] {pi8.png} \end{center}
+but actually, the next part is correct.
+
+I worked out a proof of the last statement
 \[ (AB + AC):BC = AD:DB \]
 
-The proof is as follows.
 \begin{center} \includegraphics [scale=0.4] {pi7.png} \end{center}
 We have that $\triangle ABC$ is a right triangle and that $AD$ and thus $Ad$ is the angle bisector for $\angle BAC$.  Therefore, we have by our favorite theorem that
 \[ (AB + AC):BC =  AC:Cd \]
 We also have that $\triangle ABD$ is a right triangle and by virtue of the angle bisector construction, $\triangle ABD$ is similar to $\triangle ACd$.  Therefore:
 \[ AC:Cd = AD:DB \]
-These two lines combine to give the desired result.  
+These two lines combine to give the desired result.
+
+But thinking about this later, it just follows from the corollary of the angle bisector theorem that we used before.
 
 The ratio $AD:DB$ is what we need going forward, and we get that by evaluating  $(AB + AC):BC$.  We have that the cotangent $AC : BC < 1351 : 780$, and $AB:BC$ is the cosecant whose value is $2$ so we multiply $780 \times 2 = 1560$, and then add $1351$ to get the numerator of the result.
 
@@ -172,13 +177,13 @@ $\bullet$  $AD : DB < 2911 : 780$
 
 From the Pythagorean theorem:  $AD^2 + BD^2 = AB^2$ so
 \[ AB^2:BD^2 = AD^2:BD^2 + 1 \]
-$AD : DB < 2911 : 780$  So we obtain $2911^2 = 8473921$ and $BD^2 = 608400$ so we have that
+$AD : DB < 2911 : 780$  
+
+So we obtain $2911^2 = 8473921$ and $BD^2 = 608400$ so we have that
 \[ AB^2:BD^2 =  9082321: 608400 \]
 \[ AB:BD <  3013 \ 3/4: 780 \]
 
 $\bullet$  $AB : BD < 3013 \ 3/4 : 780$
-
-It is interesting that, although the construction is different, we are using the same relationships to go from the cotangent and cosecant of $\theta$ to the cotangent and cosecant of $\theta/2$.
 
 \subsection*{Part B, round 1 summary}
 It is interesting that, although the construction is different, we are using the same relationships.  We started with the cosecant and the cotangent for $\triangle ABC$, namely $AB:BC$ and $:AC:BC$.
@@ -215,13 +220,11 @@ $1823^2 = 3323329;  240^2 = 57600$;  so we have $3380929$ and the square root is
 $\bullet$ $AB:BE = 1838 \ 9/11: 240$, the cosecant.
 
 \subsection*{Part B, round 3}
-
 Now, let $AF$ bisect the angle, and then join $BF$.  Substitute letters (carefully, looking at the diagram).  First the cotangent
 
 \[ (AB + AE):BE = AF:FB \]
 
 Then the cosecant.
-
 \[ AB^2:BF^2 = AF^2:BF^2 + 1 \]
 
 For the first part we have $1838 \ 9/11: 240 + AE:EB = 1823:240 = 3661 \ 9/11:240$. 
@@ -235,11 +238,9 @@ For the second part we have the previous number squared and added to 1 and then 
 $\bullet$ $AB:FB = 1009 \ 1/6:66$, the cosecant.
 
 \subsection*{Part B, round 4}
-
 Finally, let $AG$ bisect the angle, and then join $BG$.  Substitute letters.  First the cotangent
 
 \[ (AB + AF):BF = AG:GB \]
-
 Then the cosecant.
 
 \[ AB^2:BG^2 = AG^2:BG^2 + 1 \]
