@@ -19,6 +19,72 @@
 \maketitle
 \Large
 
+\subsection*{analysis of the calculations:  perimeter}
+
+$\circ$  base case is a square
+
+$\circ$  perimeter of circle with $d = 1$
+
+$\circ$  rule: do $P$ first then $p$
+
+formulas
+
+\[ P' = 2pP/(p + P) \]
+\[ p' = \sqrt{pP'} \]
+
+initialization
+
+\[ P = 4 \]
+\[ p = 2 \sqrt{2} \]
+
+Let's switch variables to make the general case clear.  Let $x = P = 4, y = p = 2 \sqrt{2}$ and follow the rules above:
+
+\[ x' = 2xy/(x+y) \]
+
+\[ y' = \sqrt{x'y} \]
+
+\[ x = x'; y = y' \]
+\[ x' = 2xy/(x+y) \]
+
+\subsection*{Area}
+
+$\circ$  base case is still a square
+
+$\circ$  area of circle with r = 1
+
+$\circ$  rule:  do $a$ first then $A$
+
+formulas
+
+\[ a' = \sqrt{aA} \]
+\[ A' = 2a'A(a'+A) \]
+
+initialization
+
+\[ a = 2 \] 
+\[ A = 4 \]
+
+a special first step for area
+
+\begin{verbatim}
+a' = sqrt(aA)
+   = 2 sqrt{2)
+a = a'
+\end{verbatim}
+
+Now, let $x = A = 2, y = a = 2 \sqrt{2}$.  Note the switched order, lower case $a$ second.
+
+\[ x' = 2xy/(x+y) \]
+
+\[ y' = \sqrt{x'y} \]
+
+\[ x = x'; y = y' \]
+\[ x' = 2xy/(x+y) \]
+
+It's exactly the same calculation!  The change in order of operations is seen to be due to the fact that we need a first step for the area, to convert $a = 2$ to $a = 2 \sqrt{2}$.
+
+Let's actually do a few steps of the calculation by hand.
+
 \subsection*{perimeter}
 $P$ first, then $p$.  For a square on a circle of diameter $1$, the outside perimeter is
 \[ P = 4 \]

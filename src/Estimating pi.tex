@@ -1,0 +1,63 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Estimating pi}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+We can get an estimate for the value of $\pi$ by looking at the perimeters for the series square, hexagon, octagon.  The circle has diameter of $1$, so the value of $\pi$ lies between the internal and external perimeters.
+
+\subsection*{square}
+\begin{center} \includegraphics [scale=0.35] {pi_sq.png} \end{center}
+Dividing the internal square along the diagonal, the right triangle is isosceles with hypotenuse equal to $1$ and sides equal to $1/\sqrt{2}$.  The internal perimeter is $4/\sqrt{2} = 2 \sqrt{2} = 2.828$.
+
+The external perimeter is easy, it is just $4$ times the diameter, or $4$.  
+
+\subsection*{hexagon}
+\begin{center} \includegraphics [scale=0.35] {pi_hex.png} \end{center}
+Each of the six sectors of a hexagon consists of an equilateral triangle, with side equal to $1/2$, so the internal perimeter is $6 \cdot 1/2 = 3$.  
+
+The six sectors of the external perimeter each have an altitude equal to $1/2$.  The half-sectors are $30-60-90$ triangles with sides $1-2-\sqrt{3}$.  Hence the ratio of one-half an external side to the radius is $1/\sqrt{3}$ and since the radius is $1/2$, the actual value is $1/2 \sqrt{3}$.  So each whole side is $1/\sqrt{3}$, giving $6/ \sqrt{3} = 3.464$.
+
+\subsection*{octagon}
+\begin{center} \includegraphics [scale=0.35] {pi_oct.png} \end{center}
+The octagon suddenly becomes quite challenging.  I really don't know any way to do this except by using trigonometry, and the corollary of the angle bisector rule that says:
+\[ \cot \theta + \csc \theta = \cot \theta/2 \]
+For a 45 degree angle the cotangent is $1$ and the cosecant is $\sqrt{2}$ so
+\[ \cot \theta/2 = 1 + \sqrt{2} \]
+
+Hence for the external perimeter, let the half-side be $h$, then
+\[ \frac{r}{h} = \cot \theta/2 = 1 + \sqrt{2} \]
+\[ h = \frac{1/2}{1 + \sqrt{2}} \]
+and there are sixteen of them so
+\[ P = \frac{8}{1 + \sqrt{2}} = 3.3137 \]
+
+For the internal perimeter, we have the hypotenuse, hence we will need the cosecant.  Label the sides of a right triangle $a,b,c$.  The Pythagorean theorem:
+\[ a^2 + b^2 = c^2 \]
+\[ \frac{a^2}{b^2} + 1 = \frac{c^2}{b^2} \]
+If we choose $a$ as the adjacent side, then $a/b$ is the cotangent and $c/b$ is the cosecant.  Hence
+\[ \csc \theta = \sqrt{\cot^2 \theta + 1} \]
+and in our case
+\[ \csc \pi/ 8 = \sqrt{ (1 + \sqrt{2})^2 + 1 } = 2.613 \]
+
+Let $h$ be the half-side then
+\[ \frac{1/2}{h} = \csc \theta = 2.613 \]
+\[ h = 0.19 \]
+The total perimeter is $16$ times this or $3.0615$
+
+This is round 1 of Archimedes calculation.
+
+\end{document}

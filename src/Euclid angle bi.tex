@@ -1,0 +1,52 @@
+\documentclass[11pt, oneside]{article} 
+\usepackage{geometry}
+\geometry{letterpaper} 
+\usepackage{graphicx}
+	
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{{/Users/telliott_admin/Dropbox/Tex/png/}}
+% \begin{center} \includegraphics [scale=0.4] {gauss3.png} \end{center}
+
+\title{Euclid's proof of angle bisector corollary}
+\date{}
+
+\begin{document}
+\maketitle
+\Large
+Consider the following $\triangle ABC$, with $\angle BAC$ bisected by $AE$.
+\begin{center} \includegraphics [scale=0.3] {angle_bisector5.png} \end{center}
+The angle bisector theorem says that $AB:BD = AC:DC$, and the corollary says that $AB + AC: BC$ is the same ratio.
+\subsection*{Euclid's proof}
+Euclid's proof is Book 6, proposition 3.
+\begin{center} \includegraphics [scale=0.3] {angle_bisector6.png} \end{center}
+Draw $CE$ parallel to $DA$.  Then, $\angle DAC = \angle ACE$ (by alternate interior angles).  
+
+We are given that $\angle DAB = \angle CAD$, and now see that $\angle AEC$ and $\angle DAB$ are equal as corresponding angles of a line cutting two parallel lines.  Therefore all four angles (marked $\phi$) are equal.
+
+Therefore, $\triangle ACE$ is isosceles, with $AC = AE$.
+
+Furthermore, $\triangle ABD$ is similar to $\triangle EBC$.  Therefore, $AB:BD = EB:BC$.  
+
+And since $EB = EA + AB$ and $AC = AE$, we have that $AB:BD = AB + AC:BC$.
+
+\subsection*{reverse}
+This proof just reverses each statement above.  We are given $AB:AC = BD:DC$.  
+
+Both are equal to $AB:AE$, by similar triangles, so $AC = AE$.  
+
+Therefore $\triangle ACE$ is isosceles with $\angle ACE  = \angle AEC$.
+
+But $\angle AEC = \angle BAD$ (isosceles)
+
+and $\angle ACE = \angle CAD$ (alternate interior angles)
+
+so $\angle CAD = \angle BAD$.
+
+$\square$
+
+\end{document}

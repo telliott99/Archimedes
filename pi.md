@@ -1,11 +1,16 @@
 #### Pi
 
-In this section, we will discuss Archimedes' method for approximating the value of $\pi$, the ratio of the circumference of a circle to its diameter.  
+Archimedes is famous, among other things, for developing a very accurate estimate for the value of pi, the ratio of the circumference of a circle to its diameter.  
 
-Archimedes' method is to measure the perimeter of paired inscribed and circumscribed polygons.  In particular, he came up with a way to compute the perimeter of a polygon of 2n sides, if the perimeter for an n-sided one is already known.
+Archimedes method was to measure the perimeters of paired polygons having the same number of sides, one inscribed and the other circumscribed into a circle.  The ratio of these perimeters to the diameter of the circle provide upper and lower bounds on the value of pi.
+
+The key was that Archimedes came up with a way to compute the perimeter of a polygon of 2n sides, if the perimeter for an n-sided one is already known.
+
+He started with a hexagon (6 x 2^n, with n = 0), and then doubled the number of sides four times (6 x 2^4 = 96).
+
+This figure shows octagons, which can also be used (as we will see).
 
 <img src="figs/fig1.png" style="width: 400px;" />
-
 
 The famous result is 
 
@@ -13,43 +18,62 @@ The famous result is
 
 In decimal that's 
 
-$3.140845.. < \pi < 3.1428571$
+``3.140845.. < pi < 3.1428571``
 
-However, to focus on the bounds really misses the main idea, which is that Archimedes described an iterative procedure that can be used to calculate the value of $\pi$ to any desired accuracy</i>.  
+This is a very good estimate, the bounds differ from the true value by less than 1 part in 1000 for the lower one and less than 1.3 parts for the upper.
 
-He started with a hexagon ($6 \cdot 2^n$, with n = 0), and then doubled the number of sides four times ($6 \cdot 2^4 = 96$).  
+However, to focus on the bounds really misses the main idea, which is that Archimedes described an iterative procedure that can be used to calculate the value of pi to <i>any desired accuracy</i>.  
 
-Given the limitations of numerical calculation in Archimedes' time --- no decimal arithmetic, only fractions --- it is amazing that he went as far as he did, calculating bounds for $\pi$ in terms of two 96-sided polygons.
+Given the limitations of numerical calculation in Archimedes' time --- no decimal arithmetic, only fractions --- it is amazing that he went as far as he did.
 
-The argument is somewhat unwieldy in detail.  We give his exact proof.  (Note:  I have not read the original, nor the Heath translation).  But I have a trusted [source](https://itech.fgcu.edu/faculty/clindsey/mhf4404/archimedes/archimedes.html) to show me how.  
+The argument is somewhat unwieldy in detail.  We give his exact proof, followed by a second, slightly friendlier version.  (Note:  I have not read the original, nor the Heath translation.  But I have a trusted [source](https://itech.fgcu.edu/faculty/clindsey/mhf4404/archimedes/archimedes.html) to guide me.)
 
-Later, we will also use modern trigonometry to achieve the same result more economically.  And to top it off, we go back to basic geometry to derive the same results by a different approach.
+Underpinning all the different results is the same fundamental idea which is shown in this diagram
+
+<img src="figs/fig2.png" style="width: 250px;" />
+
+If we know the three sides of the large triangle ``a, c`` and ``f``, and the triangle is bisected as shown, then it is possible (easy) to calculate the ratio ``a/d``.  That's the main step.  
+
+``a/d`` is the cotangent of the half angle.  The ratio of the hypotenuse along the bisector ``b/d`` is the cosecant, and it follows from the Pythagorean theorem.
 
 #### Preliminary theorems
 
-As a preliminary, we have short write-ups for the various mathematical proofs required for the calculations.  The first two 
+As a preliminary, here are short write-ups for various mathematical proofs required for the calculations.  The first two are
 
 - [sum of angles](pdfs/Sum of angles.pdf)
 - [double and half-angle formulas](pdfs/Double angle.pdf)
 
-give us formulas for the trig functions of &theta;/2, given they are known for angle &theta;.  The last one is a classical result of Greek geometry
+These give us formulas for the trig functions of &theta;/2, given they are known for angle &theta;.  
+
+They can be shown to be a consequence of the angle bisector theorem, which is a classical result of Greek geometry
 
 - [angle bisector](pdfs/Angle bisector.pdf)
+- [Euclid's proof](pdfs/Euclid angle bi.pdf)
 
-which underpins Archimedes whole approach.  Not too surprising, it turns out that this result can be recast to give us the half-angle trig functions.
+This pair of theorems form the basis for Archimedes whole approach.  Not too surprising, it turns out that the classical result can be used to derive the half-angle trig functions.
 
-[Todo:  I will also have something to say about the various fractional manipulations and estimates for square roots.]
+Archimedes also relies on two approximations for the irrational number √3:  ``265/153`` and ``1350/780``.   √3 enters the picture as the cotangent of 30 degrees.
 
-#### Outline
+For more about how he did this this we need to know something about:
 
-Here are the detailed calculations that retrace Archimedes' steps in computing upper and lower bounds on pi.
+- [continued fractions](Square root of 3.pdf)
+
+#### Quick look
+
+Before we start, let's just look at calculating the perimeters for a square, hexagon and octagon.  The first two are easy, the last is more difficult.
+
+- [quick](pdfs/Estimating pi.pdf)
+
+#### Main results
+
+Here are write-ups of the detailed calculations that show Archimedes' steps in computing upper and lower bounds on pi.
 
 In the end, we will arrive at the famous expression:
 
 
-$3 \ \frac{10}{71} < \pi < 3 \ \frac{1}{7}$
+```3 10/71 < pi < 3 1/7```
 
-The first write-up is
+The first one is
 
 - [original](pdfs/Archimedes orig.pdf)
 
@@ -59,22 +83,22 @@ A revised version uses single letters (like ``f``) for the sides, and de-emphasi
 
 - [revised](pdfs/Archimedes csc.pdf)
 
-Third, the first of the modern approaches builds the argument for the sum of perimeters in terms of the sine and tangent of the half angle, i.e. the half-angle formulas.
+Then, the first of the modern approaches builds the argument for the sum of perimeters in terms of the sine and tangent of the half angle, i.e. the half-angle formulas.
 
-- [Trigonometry](pdfs/Archimedes trig.pdf)
+- [trigonometry](pdfs/Archimedes trig.pdf)
 
 
 #### Gregory's formula
 
 Two other sets of formulas reach the same end, one based on perimeters, and one on areas.  
 
-These formulas are intriguing because they are so simple, and it's not surprising that they are closely connected.  In fact, when viewed in the right light, all of these formulas express the same basic approach. 
+These formulas are intriguing because they are so simple, and nearly the same, with a twist.  It's not surprising that they are closely connected.  In fact, when viewed in the right light, all of these formulas express the same basic approach. 
 
-For example, consider a circle of unit <i>diameter</i>, so that &pi; is equal to the perimeter.  If ``p`` and ``P`` are the inside and outside perimeters for polygons whose sectors have central angle &theta;, and the same symbols are used with primes for angle &theta;/2, then:
+Consider a circle of unit <i>diameter</i>, so that &pi; is equal to the perimeter.  If ``p`` and ``P`` are the inside and outside perimeters for polygons whose sectors have central angle &theta;, and the same symbols are used with primes for angle &theta;/2, then:
 
 ```
 P' = 2pP/(p + P)
-1/P' = 1/2(1/p + 1/P)
+2/P' = 1/p + 1/P
 
 p' = √(pP')
 ```
@@ -82,33 +106,33 @@ p' = √(pP')
 The corresponding formulas for inside ``a`` and outside ``A`` areas are (for a circle of unit radius)
 
 ```
-A' = 2a'A/(a' + A)
+2/A' = 1/a' + 1/A
 a' = √(aA)
 ```
 
-The perimeter gives the ratio to the diameter, since $\pi \times d = C$, where the circumference <i>C</i> is also called the perimeter.
+The perimeter gives the ratio to the diameter, since pi x d = C, where the circumference <i>C</i> is also called the perimeter.
 
 The similar sets of formulas are subtly different.  
 
 To go from ``p`` and ``P`` to the primed version, we start with the first formula, while for area we must start with the square root.
 
-The formula $P' = 2pP/(p + P)$ is called the <i>harmonic mean</i>, while $p' = \sqrt{pP'}$ is called the geometric mean.
+The formula P' = 2pP/(p + P) is called the <i>harmonic mean</i>, while p' = sqrt(pP') is called the geometric mean.
 
 #### Perimeter and area:  derivation
 
-In the first write-up we go from the half-angle formulas to the perimeter formulas.
+First let's go from the half-angle formulas to the perimeter formulas.
 
 - [Perimeter](pdfs/Perimeter geom.pdf)
 
-The area is related to a circle of unit radius, since $\pi \times r^2 = A$.
+The area is related to a circle of unit radius, since pi x r^2 = A.
 
-Next we go from the half-angle formulas to the areaa formulas.
+Next, from the half-angle formulas to the area formulas.
 
 - [Area](pdfs/Area geom.pdf)
 
 #### Geometry
 
-In an alternative approach, we derive the formulas for perimeter and area from basic geometry.  The perimeter is first
+In yet one more alternative approach, we derive the formulas for perimeter and area from basic geometry.  The perimeter is first
 
 - [Perimeter by geometry](pdfs/Geometry1.pdf)
 
@@ -120,7 +144,7 @@ and then the area:
 
 Finally, here are some calculations to check the formulas obtained above.  The first script checks the perimeter and area formulas.
 
-- [calculate1.py](src/calculate1.py)
+- [calculate1.py](scripts/calculate1.py)
 
 <b>Output:</b>
 
@@ -145,11 +169,13 @@ Finally, here are some calculations to check the formulas obtained above.  The f
 >
 ```
 
+It cannot be a coincidence that we get exactly the same values for ``P`` and ``A`` in the printouts above, round after round.  Those for ``p`` and ``a`` match as well, except there is an offset of one row.
+
 #### Trig calculations
 
 The second script tests the trig calculations.
 
-- [calculate2.py](src/calculate2.py)
+- [calculate2.py](scripts/calculate2.py)
 
 <b>Output:</b>
 
@@ -167,106 +193,23 @@ The second script tests the trig calculations.
 
 But this is exactly the same as the perimeter calculation!
 
-#### Hand calculation
+```
+> python calculate1.py
+        perimeter
+  0 2.828427  4.000000
+  1 3.061467  3.313708
+  2 3.121445  3.182598
+  3 3.136548  3.151725
+  4 3.140331  3.144118
+  5 3.141277  3.142224
+```
 
-It cannot be a coincidence that we get exactly the same values for ``P`` and ``A`` in the printouts above, round after round.  Those for ``p`` and ``a`` match as well, except there is an offset of one row.
+#### Calculation by hand
 
 It is difficult to do these calculations by hand because after a while there are inverses of inverses of inverses.
 
 However, I carried out 3 half-steps for each method by hand, and it's absolutely clear, it is the same calculation.
 
-See writeup:
+See the write-up for a detailed analysis.
 
 [calculation](pdfs/Hand calc.pdf)
-
-Below is a detailed breakdown of the calculations.  For each round, we must rename the primed variables to be the originals.
-
-#### More by hand
-
-<b>Perimeter</b>
-
-- base case is a square
-- perimeter of circle with d = 1
-- rule: do ``P`` first then ``p``
-
-formulas
-
-```
-P' = 2pP/(p + P)
-p' = sqrt(pP')
-```
-
-initialization
-
-```
-P = 4
-p = 2 sqrt(2)
-```
-
-To see the identity, let $x = P, y = p$, and follow the rules above:
-
-```
-x = 4
-y = 2 sqrt(2)
-
-1
-x' = 2xy/(x+y)
-
-2
-y' = sqrt(x'y)
-
-3
-x = x'; y = y'
-x' = 2xy/(x+y)
-```
-
-<hr>
-
-<b>Area</b>
-
-- base case is still a square
-- area of circle with r = 1
-- rule:  do ``a`` first then ``A``
-
-
-formulas
-
-```
-a' = sqrt(aA)
-A' = 2a'A(a'+A)
-```
-
-initialization
-
-```
-a = 2
-A = 4
-```
-
-first step special for area
-
-```
-0
-a' = sqrt(aA) 
-   = 2 sqrt(2)
-a = a'
-```
-
-Now, let $x = A, y = a$.  Note the switched order.
-
-```
-x = 4
-y = 2 sqrt(2)
-
-1
-x' = 2xy/(x+y)
-
-2
-y' = sqrt(x'y)
-
-3
-x = x'; y = y'
-x' = 2xy/(x+y)
-```
-
-It's exactly the same calculation!  The change in order of operations is seen to be due to the fact that we need a first step for the area, to convert ``a = 2`` to ``a = 2 sqrt(2)``.  The difference in formulas is harder to explain.
