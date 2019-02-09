@@ -134,11 +134,11 @@ Next, from the half-angle formulas to the area formulas.
 
 In yet one more alternative approach, we derive the formulas for perimeter and area from basic geometry.  The perimeter is first
 
-- [Perimeter by geometry](pdfs/Geometry1.pdf)
+- [Perimeter by geometry](pdfs/Perimeter geom.pdf)
 
 and then the area:
 
-- [Area by geometry](pdfs/Geometry2.pdf)
+- [Area by geometry](pdfs/Area geom.pdf)
 
 #### Area and perimeter calculations
 
